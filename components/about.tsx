@@ -28,9 +28,9 @@ export function About() {
               />
             </div>
             <div className="absolute -bottom-6 -right-4 hidden rounded-2xl border border-primary/30 glass p-5 sm:block">
-              <p className="font-serif text-3xl text-primary">12+</p>
+              <p className="font-serif text-3xl text-primary">20+</p>
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                Godina umetnosti
+                Godina u svetu kose
               </p>
             </div>
           </div>
@@ -48,9 +48,7 @@ export function About() {
           </Reveal>
           <Reveal direction="left" delay={0.2}>
             <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-              U Hair Max se profesionalizam i strast spajaju. Nabavljamo
-              samo 100% prirodnu, etički nabavljenu kosu i svaku ugradnju
-              poveravamo sertifikovanim specijalistima. Od prve konsultacije
+              Od prve konsultacije
               do finalnog stilizovanja, naša misija je da pružimo besprekoran,
               prirodan rezultat i iskustvo klijenta obeleženo diskrecijom,
               udobnošću i pravim luksuzom.

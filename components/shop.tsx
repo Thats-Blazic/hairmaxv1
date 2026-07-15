@@ -3,21 +3,13 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Star, Plus, Ruler, Palette, Weight } from 'lucide-react'
-import { PRODUCTS, type ProductCategory } from '@/lib/site-data'
+import { Star, Plus, Ruler, Palette, Weight, Truck } from 'lucide-react'
+import { PRODUCTS, PRODUCT_CATEGORIES, type ProductCategory } from '@/lib/site-data'
 import { useCart } from '@/components/cart-context'
 import { SectionHeading } from '@/components/section-heading'
 import { cn } from '@/lib/utils'
 
-const FILTERS: (ProductCategory | 'Sve')[] = [
-  'Sve',
-  'Ravna kosa',
-  'Kovrdžava kosa',
-  'Talasasta kosa',
-  'Plava',
-  'Braon',
-  'Crna',
-]
+const FILTERS: (ProductCategory | 'Sve')[] = ['Sve', ...PRODUCT_CATEGORIES]
 
 export function Shop() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>('Sve')
@@ -34,7 +26,7 @@ export function Shop() {
           eyebrow="Prodavnica"
           title="Kolekcija"
           highlight="kose"
-          description="Ponesite atelje kući. Svaki paket je 100% prirodan, ručno završen i spreman za transformaciju."
+          description="Svaki paket je 100% prirodna kosa i PREMIUM kvaliteta."
         />
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
@@ -54,6 +46,14 @@ export function Shop() {
             </button>
           ))}
         </div>
+
+        <p className="mx-auto mt-8 flex max-w-3xl items-start justify-center gap-3 rounded-2xl border border-primary/25 bg-card/80 px-5 py-4 text-center text-sm leading-relaxed text-muted-foreground sm:items-center sm:text-left">
+          <Truck className="mt-0.5 h-5 w-5 shrink-0 text-primary sm:mt-0" />
+          <span>
+            Moguća je i dostava na adresu (BEX, DEX, City Express, Pošta Srbije).
+            Plaćanje pouzećem.
+          </span>
+        </p>
 
         <motion.div layout className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">

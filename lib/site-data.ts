@@ -21,7 +21,7 @@ export const NAV_LINKS = [
 
 export const STATS = [
   { value: 4200, suffix: '+', label: 'Zadovoljnih klijenata' },
-  { value: 12, suffix: '', label: 'Godina iskustva' },
+  { value: 20, suffix: '+', label: 'Godina u svetu kose' },
   { value: 60, suffix: '+', label: 'Premium proizvoda' },
   { value: 99, suffix: '%', label: 'Zadovoljstvo klijenata' },
 ]
@@ -29,15 +29,9 @@ export const STATS = [
 export const FEATURES = [
   {
     icon: 'Gem',
-    title: 'Premium kvalitet',
+    title: 'Premium 100% prirodna kosa sa punim krajevima. ',
     description:
       'Samo najfinije etički nabavljene pramenove, ručno birane za besprekorno, prirodan izgled.',
-  },
-  {
-    icon: 'BadgeCheck',
-    title: 'Sertifikovani stilisti',
-    description:
-      'Tim međunarodno sertifikovanih specijalista obučenih u najnovijim luksuznim tehnikama.',
   },
   {
     icon: 'Sparkles',
@@ -75,12 +69,19 @@ export const GALLERY: {
 ]
 
 export type ProductCategory =
-  | 'Ravna kosa'
-  | 'Kovrdžava kosa'
-  | 'Talasasta kosa'
-  | 'Plava'
-  | 'Braon'
-  | 'Crna'
+  | 'Keratin'
+  | 'Nanokeratin'
+  | 'Ring'
+  | 'Nanoring'
+  | 'WEFT-kosa na tre'
+
+export const PRODUCT_CATEGORIES: ProductCategory[] = [
+  'Keratin',
+  'Nanokeratin',
+  'Ring',
+  'Nanoring',
+  'WEFT-kosa na tre',
+]
 
 export type Product = {
   id: string
@@ -98,68 +99,90 @@ export const PRODUCTS: Product[] = [
   {
     id: 'p1',
     name: 'Svilena ravna luksuz',
-    image: '/product-straight.png',
+    image: '/kose/kosa-1.png',
     length: '56 cm',
     color: 'Kesten',
     weight: '120 g',
     price: 240,
     rating: 4.9,
-    category: 'Ravna kosa',
+    category: 'Keratin',
   },
   {
     id: 'p2',
     name: 'Kaskada kovrdža kutu',
-    image: '/product-curly.png',
+    image: '/kose/kosa-2.png',
     length: '51 cm',
     color: 'Espreso',
     weight: '140 g',
     price: 275,
     rating: 4.8,
-    category: 'Kovrdžava kosa',
+    category: 'Nanokeratin',
   },
   {
     id: 'p3',
     name: 'Rivijera talas',
-    image: '/product-wavy.png',
+    image: '/kose/kosa-3.png',
     length: '61 cm',
     color: 'Moka',
     weight: '130 g',
     price: 260,
     rating: 5.0,
-    category: 'Talasasta kosa',
+    category: 'Ring',
   },
   {
     id: 'p4',
     name: 'Platinasto plava elita',
-    image: '/product-blonde.png',
+    image: '/kose/kosa-4.png',
     length: '56 cm',
     color: 'Platina',
     weight: '120 g',
     price: 320,
     rating: 4.9,
-    category: 'Plava',
+    category: 'Nanoring',
   },
   {
     id: 'p5',
     name: 'Kesten braon signatura',
-    image: '/product-brown.png',
+    image: '/kose/kosa-5.png',
     length: '51 cm',
     color: 'Kesten braon',
     weight: '125 g',
     price: 250,
     rating: 4.7,
-    category: 'Braon',
+    category: 'WEFT-kosa na tre',
   },
   {
     id: 'p6',
     name: 'Crni oniks',
-    image: '/product-black.png',
+    image: '/kose/kosa-6.png',
     length: '61 cm',
     color: 'Potpuno crna',
     weight: '135 g',
     price: 285,
     rating: 4.9,
-    category: 'Crna',
+    category: 'Keratin',
+  },
+  {
+    id: 'p7',
+    name: 'Prirodni keratin mix',
+    image: '/kose/kosa-7.png',
+    length: '55 cm',
+    color: 'Mix nijansi',
+    weight: '130 g',
+    price: 270,
+    rating: 4.8,
+    category: 'Nanokeratin',
+  },
+  {
+    id: 'p8',
+    name: 'Platinasti keratin luksuz',
+    image: '/kose/kosa-8.png',
+    length: '60 cm',
+    color: 'Platina',
+    weight: '125 g',
+    price: 310,
+    rating: 5.0,
+    category: 'Keratin',
   },
 ]
 

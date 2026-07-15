@@ -56,7 +56,7 @@ export function Navbar() {
             Hair <span className="gold-text-gradient">Max</span>
           </span>
           <span className="truncate text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:tracking-[0.35em]">
-            Iznajmljivanje Kose
+          Iznajmljivanje i prodaja kose
           </span>
         </a>
 

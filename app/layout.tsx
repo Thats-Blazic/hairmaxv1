@@ -70,7 +70,7 @@ export default function RootLayout({
     <html lang="sr" className={`dark ${playfair.variable} ${inter.variable}`}>
       <body className="bg-background font-sans antialiased">
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
