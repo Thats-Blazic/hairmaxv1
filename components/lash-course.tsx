@@ -42,7 +42,7 @@ export function LashCourse() {
   const applyViaWhatsApp = (e: React.FormEvent) => {
     e.preventDefault()
     const message =
-      `Prijava za kurs lepljenja trepavica%0A%0A` +
+      `Prijava za edukaciju za nadogradnju trepavica%0A%0A` +
       `Ime: ${form.name}%0A` +
       `Telefon: ${form.phone}%0A` +
       `Email: ${form.email}%0A` +
@@ -73,8 +73,8 @@ export function LashCourse() {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-balance md:text-6xl lg:text-7xl"
             >
-              Kurs lepljenja{' '}
-              <span className="gold-text-gradient">trepavica</span>
+              Edukacija za{' '}
+              <span className="gold-text-gradient">nadogradnju trepavica</span>
             </motion.h1>
 
             <motion.p
@@ -110,10 +110,10 @@ export function LashCourse() {
       <section className="px-5 py-20 lg:px-8 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
-            eyebrow="Zašto ovaj kurs"
+            eyebrow="Zašto ova edukacija"
             title="Profesionalna obuka u"
             highlight="luksuznom okruženju"
-            description="Kurs je osmišljen da vam pruži čvrste osnove i samopouzdanje u radu sa klijentima, uz pristup koji prati Hair Max standarde kvaliteta."
+            description="Edukacija je osmišljena da vam pruži čvrste osnove i samopouzdanje u radu sa klijentima, uz pristup koji prati Hair Max standarde kvaliteta."
           />
 
           <motion.div
@@ -151,7 +151,7 @@ export function LashCourse() {
             <div>
               <SectionHeading
                 align="left"
-                eyebrow="Program kursa"
+                eyebrow="Program edukacije"
                 title="Šta ćete"
                 highlight="savladati"
                 description="Detaljan plan obuke koji pokriva sve ključne tehnike i znanja potrebna za profesionalan rad."
@@ -181,7 +181,7 @@ export function LashCourse() {
                 align="left"
                 eyebrow="Uključeno"
                 title="Šta dobijate"
-                highlight="uz kurs"
+                highlight="uz edukaciju"
               />
 
               <Reveal direction="right" delay={0.1}>
@@ -208,7 +208,7 @@ export function LashCourse() {
             eyebrow="Prijava"
             title="Rezervišite"
             highlight="svoje mesto"
-            description="Popunite formular i prijavite se za kurs preko WhatsApp-a. Kontaktiraćemo vas sa detaljima o terminima i cenama."
+            description="Popunite formular i prijavite se za edukaciju preko WhatsApp-a. Kontaktiraćemo vas sa detaljima o terminima i cenama."
           />
 
           <Reveal direction="up" delay={0.1}>

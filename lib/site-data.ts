@@ -16,7 +16,7 @@ export const NAV_LINKS = [
   { label: 'Prodavnica', href: '/#shop' },
   { label: 'Zakazivanje', href: '/#booking' },
   { label: 'Kontakt', href: '/#contact' },
-  { label: 'Kurs trepavica', href: '/kurs-trepavice' },
+  { label: 'Edukacija Za trepavice', href: '/kurs-trepavice' },
 ]
 
 export const STATS = [
@@ -191,23 +191,23 @@ export const LASH_COURSE = {
     'Praktičan rad na modelima pod nadzorom instruktora',
   ],
   includes: [
-    'Sertifikat po završetku kursa',
+    'Sertifikat po završetku edukacije',
     'Komplet materijala za rad tokom obuke',
     'Mali broj polaznika po grupi',
-    'Podrška i konsultacije i posle kursa',
+    'Podrška i konsultacije i posle edukacije',
   ],
   highlights: [
     {
       icon: 'GraduationCap',
       title: 'Sertifikovan program',
       description:
-        'Strukturiran kurs sa teorijom i praksom, prilagođen početnicima i onima koji žele da unaprede tehniku.',
+        'Strukturirana edukacija sa teorijom i praksom, prilagođena početnicima i onima koji žele da unaprede tehniku.',
     },
     {
       icon: 'Users',
       title: 'Mali broj polaznika',
       description:
-        'Individualan pristup i dovoljno vremena za vežbu kako biste savladali tehniku lepljenja trepavica.',
+        'Individualan pristup i dovoljno vremena za vežbu kako biste savladali tehniku nadograđivanja trepavica.',
     },
     {
       icon: 'Sparkles',

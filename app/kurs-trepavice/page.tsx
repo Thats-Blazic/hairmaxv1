@@ -6,11 +6,11 @@ import { LashCourse } from '@/components/lash-course'
 import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'Kurs lepljenja trepavica | Hair Max',
+  title: 'Edukacija za nadogradnju trepavica | Hair Max',
   description:
-    'Profesionalni kurs lepljenja trepavica u Hair Max ateljeu. Teorija, praksa, sertifikat i premium materijali. Prijavite se preko WhatsApp-a.',
+    'Profesionalna edukacija za nadogradnju trepavica u Hair Max ateljeu. Teorija, praksa, sertifikat i premium materijali. Prijavite se preko WhatsApp-a.',
   openGraph: {
-    title: 'Kurs lepljenja trepavica | Hair Max',
+    title: 'Edukacija za nadogradnju trepavica | Hair Max',
     description:
       'Naučite profesionalnu tehniku nadograđivanja trepavica u luksuznom ambijentu Hair Max ateljea.',
     images: ['/og-image.png'],

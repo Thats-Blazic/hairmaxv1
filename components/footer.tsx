@@ -8,7 +8,7 @@ const SERVICES = [
   'Usklađivanje boje',
   'Održavanje',
   'VIP luksuz paket',
-  'Kurs lepljenja trepavica',
+  'Edukacija za nadogradnju trepavica',
 ]
 
 export function Footer() {
