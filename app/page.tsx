@@ -7,7 +7,6 @@ import { About } from '@/components/about'
 import { Gallery } from '@/components/gallery'
 import { Shop } from '@/components/shop'
 import { Booking } from '@/components/booking'
-import { Location } from '@/components/location'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
 
@@ -16,14 +15,13 @@ export default function Home() {
     <CartProvider>
       <Navbar />
       <CartDrawer />
-      <main>
+      <main className="overflow-x-hidden">
         <Hero />
         <Stats />
         <About />
         <Gallery />
         <Shop />
         <Booking />
-        <Location />
         <Contact />
       </main>
       <Footer />

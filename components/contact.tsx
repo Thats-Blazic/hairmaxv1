@@ -32,7 +32,7 @@ const CONTACT_CARDS = [
     value: SITE.phoneDisplay,
     href: `https://wa.me/${SITE.whatsapp}`,
   },
-  { icon: MapPin, label: 'Lokacija', value: SITE.address, href: '#location' },
+  { icon: MapPin, label: 'Lokacija', value: SITE.address, href: '#contact' },
 ]
 
 export function Contact() {
@@ -115,7 +115,7 @@ export function Contact() {
                   <input
                     id="c-phone"
                     type="tel"
-                    placeholder="+381 60 000 000"
+                    placeholder="060 68 68 462"
                     className={inputClass}
                   />
                 </div>

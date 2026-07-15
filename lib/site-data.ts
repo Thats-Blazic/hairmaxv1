@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'Hair Max',
-  phone: '+38160686862',
+  phone: '+381606868462',
   phoneDisplay: '+381 60 68 68 462',
-  whatsapp: '38160686862',
+  whatsapp: '381606868462',
   email: 'hairmax888@gmail.com',
   instagram: 'hairmaxprodajakose',
   facebook: 'hairmax',
@@ -10,12 +10,13 @@ export const SITE = {
 }
 
 export const NAV_LINKS = [
-  { label: 'Početna', href: '#home' },
-  { label: 'O nama', href: '#about' },
-  { label: 'Galerija', href: '#gallery' },
-  { label: 'Prodavnica', href: '#shop' },
-  { label: 'Zakazivanje', href: '#booking' },
-  { label: 'Kontakt', href: '#contact' },
+  { label: 'Početna', href: '/' },
+  { label: 'O nama', href: '/#about' },
+  { label: 'Galerija', href: '/#gallery' },
+  { label: 'Prodavnica', href: '/#shop' },
+  { label: 'Zakazivanje', href: '/#booking' },
+  { label: 'Kontakt', href: '/#contact' },
+  { label: 'Kurs trepavica', href: '/kurs-trepavice' },
 ]
 
 export const STATS = [
@@ -176,3 +177,49 @@ export const SERVICES_OPTIONS = [
   'VIP luksuz paket',
   'Usklađivanje boje',
 ]
+
+export const LASH_COURSE = {
+  duration: '2 dana',
+  level: 'Početni i napredni nivo',
+  modules: [
+    'Teorija anatomije trepavica i bezbednosti rada',
+    'Upoznavanje materijala i alata profesionalnog kvaliteta',
+    'Tehnike klasičnog i volumenskog nadograđivanja',
+    'Pravilno izolovanje i lepljenje trepavica',
+    'Oblikovanje i dizajn pogleda po tipu lica',
+    'Nega trepavica i saveti za klijente',
+    'Praktičan rad na modelima pod nadzorom instruktora',
+  ],
+  includes: [
+    'Sertifikat po završetku kursa',
+    'Komplet materijala za rad tokom obuke',
+    'Mali broj polaznika po grupi',
+    'Podrška i konsultacije i posle kursa',
+  ],
+  highlights: [
+    {
+      icon: 'GraduationCap',
+      title: 'Sertifikovan program',
+      description:
+        'Strukturiran kurs sa teorijom i praksom, prilagođen početnicima i onima koji žele da unaprede tehniku.',
+    },
+    {
+      icon: 'Users',
+      title: 'Mali broj polaznika',
+      description:
+        'Individualan pristup i dovoljno vremena za vežbu kako biste savladali tehniku lepljenja trepavica.',
+    },
+    {
+      icon: 'Sparkles',
+      title: 'Premium materijali',
+      description:
+        'Radite sa profesionalnim proizvodima i alatima koji se koriste u vrhunskim salonima.',
+    },
+    {
+      icon: 'Award',
+      title: 'Sertifikat',
+      description:
+        'Po uspešnom završetku dobijate sertifikat i spremni ste da započnete svoju karijeru.',
+    },
+  ],
+}

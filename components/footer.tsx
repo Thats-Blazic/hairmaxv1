@@ -8,6 +8,7 @@ const SERVICES = [
   'Usklađivanje boje',
   'Održavanje',
   'VIP luksuz paket',
+  'Kurs lepljenja trepavica',
 ]
 
 export function Footer() {
@@ -25,7 +26,7 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-3">
               {[
-                { icon: InstagramIcon, href: `https://instagram.com/${SITE.instagram}`, label: 'Instagram' },
+                { icon: InstagramIcon, href: 'https://www.instagram.com/hairmaxprodajakose', label: 'Instagram' },
                 { icon: FacebookIcon, href: `https://facebook.com/${SITE.facebook}`, label: 'Facebook' },
                 { icon: MessageCircle, href: `https://wa.me/${SITE.whatsapp}`, label: 'WhatsApp' },
               ].map((social) => (

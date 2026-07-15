@@ -76,7 +76,7 @@ export function Booking() {
                   type="tel"
                   value={form.phone}
                   onChange={(e) => update('phone', e.target.value)}
-                  placeholder="+381 60 000 000"
+                  placeholder="060 68 68 462"
                   className={inputClass}
                 />
               </div>

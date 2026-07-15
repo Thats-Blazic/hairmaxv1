@@ -6,7 +6,7 @@ import { ArrowRight, ShoppingBag } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pb-16 md:pb-0">
       <div className="absolute inset-0">
         <Image
           src="/hero-salon.png"

@@ -34,7 +34,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function Stats() {
   return (
-    <section className="relative z-10 -mt-20 px-5 lg:px-8">
+    <section className="relative z-10 mt-10 px-5 md:mt-0 md:-mt-16 lg:-mt-20 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border glass lg:grid-cols-4">
           {STATS.map((stat, i) => (
@@ -44,12 +44,12 @@ export function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="flex flex-col items-center gap-2 p-8 text-center"
+              className="flex flex-col items-center gap-2 p-4 text-center sm:p-8"
             >
               <span className="font-serif text-4xl text-primary md:text-5xl">
                 <Counter value={stat.value} suffix={stat.suffix} />
               </span>
-              <span className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="text-xs uppercase tracking-[0.12em] text-muted-foreground sm:text-sm sm:tracking-[0.2em]">
                 {stat.label}
               </span>
             </motion.div>

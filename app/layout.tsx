@@ -27,11 +27,32 @@ export const metadata: Metadata = {
     'prirodne ekstenzije',
     'frizerski studio',
   ],
+  icons: {
+    icon: '/og-image.png',
+    apple: '/og-image.png',
+  },
   openGraph: {
-    title: 'Hair Max | Premium ekstenzije za kosu ',
+    title: 'Hair Max | Premium ekstenzije za kosu',
     description:
       'Luksuzne ekstenzije za kosu i premium salon. 100% prirodna kosa od sertifikovanih stilista.',
     type: 'website',
+    locale: 'sr_RS',
+    siteName: 'Hair Max',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1024,
+        height: 1024,
+        alt: 'Hair Max — premium kvalitet kose',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Hair Max | Premium ekstenzije za kosu',
+    description:
+      'Luksuzne ekstenzije za kosu i premium salon. 100% prirodna kosa od sertifikovanih stilista.',
+    images: ['/og-image.png'],
   },
 }
 

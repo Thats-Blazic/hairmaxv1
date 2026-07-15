@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X, ShoppingBag } from 'lucide-react'
-import { NAV_LINKS, SITE } from '@/lib/site-data'
+import { NAV_LINKS } from '@/lib/site-data'
 import { useCart } from '@/components/cart-context'
 import { cn } from '@/lib/utils'
 
@@ -19,6 +19,13 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
   return (
     <header
       className={cn(
@@ -28,12 +35,27 @@ export function Navbar() {
           : 'border-b border-transparent bg-transparent py-5',
       )}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
-        <a href="#home" className="flex flex-col leading-none">
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 bg-background/70 backdrop-blur-2xl lg:hidden"
+            style={{ zIndex: -1 }}
+            onClick={() => setOpen(false)}
+            aria-hidden
+          />
+        )}
+      </AnimatePresence>
+
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
+        <a href="/" className="flex min-w-0 flex-col leading-none">
           <span className="font-serif text-xl tracking-wide text-foreground md:text-2xl">
             Hair <span className="gold-text-gradient">Max</span>
           </span>
-          <span className="text-[10px] uppercase tracking-[0.35em] text-muted-foreground">
+          <span className="truncate text-[10px] uppercase tracking-[0.2em] text-muted-foreground sm:tracking-[0.35em]">
             Iznajmljivanje Kose
           </span>
         </a>
@@ -52,7 +74,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <button
             type="button"
             onClick={openCart}
@@ -68,7 +90,7 @@ export function Navbar() {
           </button>
 
           <a
-            href="#booking"
+            href="/#booking"
             className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-transform hover:scale-105 md:inline-flex"
           >
             Zakaži
@@ -78,6 +100,7 @@ export function Navbar() {
             type="button"
             onClick={() => setOpen((v) => !v)}
             aria-label="Otvori meni"
+            aria-expanded={open}
             className="rounded-full border border-border p-2.5 text-foreground transition-colors hover:border-primary lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -92,7 +115,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden glass lg:hidden"
+            className="glass-menu overflow-hidden lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
               {NAV_LINKS.map((link) => (
@@ -108,7 +131,7 @@ export function Navbar() {
               ))}
               <li className="pt-3">
                 <a
-                  href="#booking"
+                  href="/#booking"
                   onClick={() => setOpen(false)}
                   className="block rounded-full bg-primary px-5 py-3 text-center font-medium text-primary-foreground"
                 >
