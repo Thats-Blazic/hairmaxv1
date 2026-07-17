@@ -8,8 +8,6 @@ import {
   Mail,
   MessageCircle,
   MapPin,
-  Send,
-  Check,
   Sparkles,
   ShoppingBag,
   Truck,
@@ -58,18 +56,8 @@ const CONTACT_CARDS = [
   { icon: MapPin, label: 'Lokacija', value: SITE.address, href: undefined },
 ]
 
-const inputClass =
-  'w-full rounded-xl border border-border bg-secondary/40 px-4 py-3 text-foreground placeholder:text-muted-foreground/60 outline-none transition-colors focus:border-primary'
-
 export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
-  const [sent, setSent] = useState(false)
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
-  }
 
   return (
     <section
@@ -90,122 +78,17 @@ export function Faq() {
             <span className="gold-text-gradient">pitanja</span>
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Pronađite odgovore, kontaktirajte nas ili pošaljite poruku — sve na jednom
-            mestu.
+            Pronađite odgovore i kontaktirajte nas — sve na jednom mestu.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
-          <div className="lg:col-span-5 lg:sticky lg:top-28">
-            <Reveal direction="right" delay={0.1}>
-              <h3 className="font-serif text-xl">Kontaktirajte nas</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Dostupni smo putem telefona, društvenih mreža i WhatsApp-a.
-              </p>
-            </Reveal>
-
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: '-60px' }}
-              className="mt-6 grid gap-3 sm:grid-cols-2"
-            >
-              {CONTACT_CARDS.map((card) => {
-                const inner = (
-                  <>
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                      <card.icon className="h-4 w-4" />
-                    </span>
-                    <div>
-                      <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                        {card.label}
-                      </p>
-                      <p className="mt-1 break-words text-sm text-foreground/90">
-                        {card.value}
-                      </p>
-                    </div>
-                  </>
-                )
-
-                return card.href ? (
-                  <motion.a
-                    key={card.label}
-                    variants={staggerItem}
-                    href={card.href}
-                    target={card.href.startsWith('http') ? '_blank' : undefined}
-                    rel="noreferrer"
-                    className="group flex items-start gap-3 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/50"
-                  >
-                    {inner}
-                  </motion.a>
-                ) : (
-                  <motion.div
-                    key={card.label}
-                    variants={staggerItem}
-                    className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4"
-                  >
-                    {inner}
-                  </motion.div>
-                )
-              })}
-            </motion.div>
-
-            <Reveal direction="up" delay={0.2}>
-              <form
-                onSubmit={onSubmit}
-                className="mt-8 flex flex-col gap-4 rounded-3xl border border-border bg-card p-6"
-              >
-                <h3 className="font-serif text-lg">Pošaljite poruku</h3>
-                <input id="c-name" required placeholder="Vaše ime" className={inputClass} />
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <input
-                    id="c-email"
-                    type="email"
-                    required
-                    placeholder="Email"
-                    className={inputClass}
-                  />
-                  <input
-                    id="c-phone"
-                    type="tel"
-                    placeholder="060 68 68 462"
-                    className={inputClass}
-                  />
-                </div>
-                <textarea
-                  id="c-message"
-                  required
-                  rows={4}
-                  placeholder="Kako vam možemo pomoći?"
-                  className={`${inputClass} resize-none`}
-                />
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition-transform hover:scale-[1.02]"
-                >
-                  {sent ? (
-                    <>
-                      <Check className="h-5 w-5" />
-                      Poruka poslata
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-5 w-5" />
-                      Pošalji poruku
-                    </>
-                  )}
-                </button>
-              </form>
-            </Reveal>
-          </div>
-
+        <div className="mt-14">
           <motion.ul
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            className="space-y-4 lg:col-span-7"
+            className="mx-auto max-w-4xl space-y-4"
           >
             {FAQ_ITEMS.map((item, index) => {
               const isOpen = openIndex === index
@@ -278,6 +161,58 @@ export function Faq() {
               )
             })}
           </motion.ul>
+
+          <Reveal direction="up" delay={0.1} className="mx-auto mt-16 max-w-4xl">
+            <h3 className="text-center font-serif text-xl">Kontaktirajte nas</h3>
+            <p className="mx-auto mt-2 max-w-lg text-center text-sm text-muted-foreground">
+              Dostupni smo putem telefona, društvenih mreža i WhatsApp-a.
+            </p>
+          </Reveal>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="mx-auto mt-8 grid max-w-4xl gap-3 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {CONTACT_CARDS.map((card) => {
+              const inner = (
+                <>
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <card.icon className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                      {card.label}
+                    </p>
+                    <p className="mt-1 break-words text-sm text-foreground/90">{card.value}</p>
+                  </div>
+                </>
+              )
+
+              return card.href ? (
+                <motion.a
+                  key={card.label}
+                  variants={staggerItem}
+                  href={card.href}
+                  target={card.href.startsWith('http') ? '_blank' : undefined}
+                  rel="noreferrer"
+                  className="group flex items-start gap-3 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/50"
+                >
+                  {inner}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={card.label}
+                  variants={staggerItem}
+                  className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4"
+                >
+                  {inner}
+                </motion.div>
+              )
+            })}
+          </motion.div>
         </div>
       </div>
     </section>
