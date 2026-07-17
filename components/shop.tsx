@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Star, Plus, Ruler, Palette, Weight, Truck } from 'lucide-react'
+import { Star, Plus, Ruler, Weight, Truck } from 'lucide-react'
 import { PRODUCTS, PRODUCT_CATEGORIES, type ProductCategory } from '@/lib/site-data'
 import { useCart } from '@/components/cart-context'
 import { SectionHeading } from '@/components/section-heading'
@@ -86,14 +86,10 @@ export function Shop() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-serif text-xl">{product.name}</h3>
 
-                  <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-muted-foreground">
+                  <div className="mt-4 grid grid-cols-2 gap-2 text-xs text-muted-foreground">
                     <span className="flex flex-col items-center gap-1 rounded-lg bg-secondary/60 p-2 text-center">
                       <Ruler className="h-3.5 w-3.5 text-primary" />
                       {product.length}
-                    </span>
-                    <span className="flex flex-col items-center gap-1 rounded-lg bg-secondary/60 p-2 text-center">
-                      <Palette className="h-3.5 w-3.5 text-primary" />
-                      {product.color}
                     </span>
                     <span className="flex flex-col items-center gap-1 rounded-lg bg-secondary/60 p-2 text-center">
                       <Weight className="h-3.5 w-3.5 text-primary" />

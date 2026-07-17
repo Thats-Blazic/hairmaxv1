@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react'
 import { InstagramIcon, FacebookIcon } from '@/components/social-icons'
-import { SITE, NAV_LINKS, WORKING_HOURS } from '@/lib/site-data'
+import { SITE, NAV_LINKS } from '@/lib/site-data'
 
 const SERVICES = [
   'Ekstenzije za kosu',
@@ -15,14 +15,15 @@ export function Footer() {
   return (
     <footer className="border-t-2 border-primary/60 bg-background px-5 pb-8 pt-16 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <span className="font-serif text-2xl">
               Hair <span className="gold-text-gradient">Max</span>
             </span>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Luksuzni frizerski atelje posvećen premium ekstenzijama,
-              prirodnoj lepoti i nezaboravnom vrhunskom iskustvu.
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              Premium kvalitet kose za one koji ne pristaju na manje. 100% prirodne
+              ekstenzije, pažljivo birane pramenove i stručna usluga — duge, guste,
+              prelepe. Ti biraš, mi pružamo.
             </p>
             <div className="mt-6 flex gap-3">
               {[
@@ -66,18 +67,6 @@ export function Footer() {
               {SERVICES.map((service) => (
                 <li key={service} className="text-sm text-muted-foreground">
                   {service}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-serif text-lg">Radno vreme</h3>
-            <ul className="mt-4 space-y-2.5">
-              {WORKING_HOURS.map((row) => (
-                <li key={row.day} className="text-sm">
-                  <span className="block text-foreground/90">{row.day}</span>
-                  <span className="text-muted-foreground">{row.hours}</span>
                 </li>
               ))}
             </ul>

@@ -12,7 +12,7 @@ export function CartDrawer() {
 
   const checkoutViaWhatsApp = () => {
     const lines = items.map(
-      (item) => `• ${item.name} (${item.color}, ${item.length}) x${item.quantity} — $${item.price * item.quantity}`,
+      (item) => `• ${item.name} (${item.length}, ${item.weight}) x${item.quantity} — $${item.price * item.quantity}`,
     )
     const message = `Zdravo Hair Max! Želim da poručim:%0A${lines.join('%0A')}%0A%0AUkupno: $${total}`
     window.open(`https://wa.me/${SITE.whatsapp}?text=${message}`, '_blank')
@@ -86,7 +86,7 @@ export function CartDrawer() {
                               {item.name}
                             </h3>
                             <p className="text-xs text-muted-foreground">
-                              {item.color} · {item.length}
+                              {item.length} · {item.weight}
                             </p>
                           </div>
                           <button
