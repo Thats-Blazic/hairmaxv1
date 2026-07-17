@@ -192,6 +192,44 @@ export const SERVICES_OPTIONS = [
   'Usklađivanje boje',
 ]
 
+export const FAQ_ITEMS = [
+  {
+    question: 'Da li je kosa 100% prirodna?',
+    answer:
+      'Da. Sva kosa u našoj kolekciji je 100% prirodna, pažljivo birana i premium kvaliteta — sa punim krajevima i prirodnim sjajem.',
+  },
+  {
+    question: 'Kako mogu da poručim kosu?',
+    answer:
+      'Izaberite proizvod u sekciji Prodavnica, dodajte ga u korpu i poručite preko WhatsApp-a. Takođe nas možete kontaktirati direktno telefonom ili porukom.',
+  },
+  {
+    question: 'Da li vršite dostavu?',
+    answer:
+      'Da, dostava je moguća na vašu adresu putem BEX, DEX, City Express i Pošte Srbije, širom zemlje.',
+  },
+  {
+    question: 'Koje načine plaćanja prihvatate?',
+    answer:
+      'Plaćanje pouzećem pri dostavi. Za usluge u salonu i zakazivanje termina, kontaktirajte nas za detalje.',
+  },
+  {
+    question: 'Koje vrste ekstenzija nudite?',
+    answer:
+      'U ponudi imamo Keratin, Nanokeratin, Ring, Nanoring i WEFT-kosu na traci — u dužini 60–70 cm i težini 100 g.',
+  },
+  {
+    question: 'Kako da zakažem termin?',
+    answer:
+      'Popunite formular u sekciji Zakazivanje i potvrdite preko WhatsApp-a, ili nas pozovite na +381 60 68 68 462.',
+  },
+  {
+    question: 'Da li nudite edukaciju?',
+    answer:
+      'Da. Organizujemo edukaciju za nadogradnju trepavica — sa teorijom, praksom i sertifikatom po završetku. Više informacija na stranici Edukacija.',
+  },
+]
+
 export const LASH_COURSE = {
   duration: '2 dana',
   level: 'Početni i napredni nivo',

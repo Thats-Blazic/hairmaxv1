@@ -7,7 +7,7 @@ import { About } from '@/components/about'
 import { Gallery } from '@/components/gallery'
 import { Shop } from '@/components/shop'
 import { Booking } from '@/components/booking'
-import { Contact } from '@/components/contact'
+import { Faq } from '@/components/faq'
 import { Footer } from '@/components/footer'
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <Gallery />
         <Shop />
         <Booking />
-        <Contact />
+        <Faq />
       </main>
       <Footer />
     </CartProvider>
